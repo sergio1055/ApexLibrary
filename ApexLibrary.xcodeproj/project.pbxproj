@@ -11,6 +11,9 @@
 		513746E02BD7FE0500B0BF1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513746DF2BD7FE0500B0BF1E /* ContentView.swift */; };
 		513746E22BD7FE0600B0BF1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513746E12BD7FE0600B0BF1E /* Assets.xcassets */; };
 		513746E52BD7FE0600B0BF1E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513746E42BD7FE0600B0BF1E /* Preview Assets.xcassets */; };
+		513746EC2BD804DE00B0BF1E /* jpapexpredators.json in Resources */ = {isa = PBXBuildFile; fileRef = 513746EB2BD804DE00B0BF1E /* jpapexpredators.json */; };
+		513746EE2BD8290600B0BF1E /* ApexPredator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513746ED2BD8290600B0BF1E /* ApexPredator.swift */; };
+		51D15B442BD97438008DC2DF /* Predators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D15B432BD97438008DC2DF /* Predators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		513746DF2BD7FE0500B0BF1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		513746E12BD7FE0600B0BF1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		513746E42BD7FE0600B0BF1E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		513746EB2BD804DE00B0BF1E /* jpapexpredators.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jpapexpredators.json; sourceTree = "<group>"; };
+		513746ED2BD8290600B0BF1E /* ApexPredator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApexPredator.swift; sourceTree = "<group>"; };
+		51D15B432BD97438008DC2DF /* Predators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +59,10 @@
 			children = (
 				513746DD2BD7FE0500B0BF1E /* ApexLibraryApp.swift */,
 				513746DF2BD7FE0500B0BF1E /* ContentView.swift */,
+				513746ED2BD8290600B0BF1E /* ApexPredator.swift */,
+				51D15B432BD97438008DC2DF /* Predators.swift */,
 				513746E12BD7FE0600B0BF1E /* Assets.xcassets */,
+				513746EB2BD804DE00B0BF1E /* jpapexpredators.json */,
 				513746E32BD7FE0600B0BF1E /* Preview Content */,
 			);
 			path = ApexLibrary;
@@ -127,6 +136,7 @@
 			files = (
 				513746E52BD7FE0600B0BF1E /* Preview Assets.xcassets in Resources */,
 				513746E22BD7FE0600B0BF1E /* Assets.xcassets in Resources */,
+				513746EC2BD804DE00B0BF1E /* jpapexpredators.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51D15B442BD97438008DC2DF /* Predators.swift in Sources */,
+				513746EE2BD8290600B0BF1E /* ApexPredator.swift in Sources */,
 				513746E02BD7FE0500B0BF1E /* ContentView.swift in Sources */,
 				513746DE2BD7FE0500B0BF1E /* ApexLibraryApp.swift in Sources */,
 			);
