@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
     @State var searchText = ""
     @State var alphabetical = false
     @State var currentSelection = PredatorType.all
-    
+
     let predators = Predators()
     
     var filterDinos: [ApexPredator] {
@@ -24,9 +25,7 @@ struct ContentView: View {
         NavigationStack {
             List(filterDinos) { predator in
                 NavigationLink {
-                    Image(predator.image)
-                        .resizable()
-                        .scaledToFit()
+                    PredatorDetail(predator: predator, position: .camera(MapCamera(centerCoordinate: predator.location, distance: 30000)))
                 } label: {
                     
                     HStack {
