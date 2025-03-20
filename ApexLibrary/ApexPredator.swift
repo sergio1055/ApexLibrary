@@ -16,7 +16,7 @@ struct ApexPredator: Decodable, Identifiable {
     let type: PredatorType
     let latitude: Double
     let longitude: Double
-    let movies: [String]
+    let movies: [MovieType]
     let movieScenes: [MovieScene]
     let link: String
     
@@ -32,6 +32,42 @@ struct ApexPredator: Decodable, Identifiable {
         let id: Int
         let movie: String
         let sceneDescription:String
+    }
+}
+
+
+
+enum MovieType: String, Decodable, CaseIterable, Identifiable {
+    case all
+    case JurassicParkI = "Jurassic Park"
+    case JurassicParkII = "The Lost World: Jurassic Park"
+    case JurassicParkIII = "Jurassic Park III"
+    case JurassicWorldI = "Jurassic World"
+    case JurassicWorldII = "Jurassic World: Fallen Kingdom"
+    case JurassicWorldIII = "Jurassic World: Dominion"
+    
+    var id: MovieType {
+        self
+    }
+    
+    var icon: String {
+        switch self {
+        case .all:
+            "square.stack.3d.up.fill"
+        case .JurassicParkI:
+            "fossil.shell.fill"
+        case .JurassicParkII:
+            "fossil.shell.fill"
+        case .JurassicParkIII:
+            "fossil.shell.fill"
+        case .JurassicWorldI:
+            "globe.europe.africa"
+        case .JurassicWorldII:
+            "globe.europe.africa"
+        case .JurassicWorldIII:
+            "globe.europe.africa"
+        }
+        
     }
 }
 

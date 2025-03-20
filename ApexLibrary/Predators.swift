@@ -61,4 +61,14 @@ class Predators {
         }
     }
     
+    func filter(by type: MovieType) {
+        if type == .all {
+            apexPredators = allApexPredators
+        } else {
+            apexPredators = allApexPredators.filter { predator in
+                predator.movies.contains(type)
+            }
+        }
+    }
+    
 }

@@ -11,12 +11,15 @@ import MapKit
 struct ContentView: View {
     @State var searchText = ""
     @State var alphabetical = false
-    @State var currentSelection = PredatorType.all
+    @State var currentPredatorType = PredatorType.all
+    @State var currentMovieType = MovieType.all
+    
 
     let predators = Predators()
     
     var filterDinos: [ApexPredator] {
-        predators.filter(by:currentSelection)
+        predators.filter(by:currentPredatorType)
+        predators.filter(by: currentMovieType)
         predators.sort(by: alphabetical)
         return predators.search(for: searchText)
     }
@@ -68,7 +71,7 @@ struct ContentView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Menu {
-                        Picker("Filter", selection: $currentSelection.animation()) {
+                        Picker("Filter", selection: $currentPredatorType.animation()) {
                             ForEach(PredatorType.allCases) {
                                 type in
                                 Label(type.rawValue.capitalized, systemImage: type.icon)
@@ -76,6 +79,19 @@ struct ContentView: View {
                         }
                     } label: {
                         Image(systemName: "slider.horizontal.3")
+                    }
+                }
+                
+                ToolbarItem(placement: .topBarTrailing) {
+                    Menu {
+                        Picker("Filter", selection: $currentMovieType.animation()) {
+                            ForEach(MovieType.allCases) {
+                                type in
+                                Label(type.rawValue.capitalized, systemImage: type.icon)
+                            }
+                        }
+                    } label: {
+                        Image(systemName: "movieclapper")
                     }
                 }
             }

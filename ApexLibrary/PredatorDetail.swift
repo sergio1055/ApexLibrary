@@ -83,7 +83,7 @@ struct PredatorDetail: View {
                         .font(.title3)
                     
                     ForEach(predator.movies, id: \.self) { movie in
-                        Text("•" + movie)
+                        Text("•" + movie.rawValue)
                             .font(.subheadline)
                     }
                     
